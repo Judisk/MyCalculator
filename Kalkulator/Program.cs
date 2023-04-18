@@ -5,17 +5,11 @@ using static System.Net.Mime.MediaTypeNames;
 
 while (true)
 {
-
     double ValueOne=IntEnter();
     int action = CheckTryAction();
     double ValueTwo = IntEnter();
 
-
     Console.WriteLine(CheckAction(ValueOne, ValueTwo, action));
-    
-
-
-
 
 }
 
