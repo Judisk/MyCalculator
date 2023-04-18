@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using static System.Net.Mime.MediaTypeNames;
+
 double MemoryValue = 0 ;
 double ActionCount = 0;
 Console.WriteLine("Вы можете \n" +
@@ -25,10 +26,8 @@ while (true)
     Console.WriteLine(Result);
     ActionCount++;
     CheckAction(ValueOne, ValueTwo, action);
-    
 
     Console.WriteLine();
-    
 }
 
 dynamic CheckAction(double valueOne,double valueTwo ,int action)
