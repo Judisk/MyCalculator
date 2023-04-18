@@ -88,14 +88,14 @@ dynamic IntEnter(ref double MemoryValue,ref double ActionCount)
             Environment.Exit(0);
             return false;
         }
-        else if (EnterNum=="CM" || EnterNum=="cm")
+        else if (EnterNum == "CM" || EnterNum == "cm")
         {
             Console.WriteLine("Вы очистили память");
-            ActionCount= 0;
+            ActionCount = 0;
             MemoryValue = 0;
             return IntEnter(ref MemoryValue, ref ActionCount);
         }
-        else if (EnterNum=="M"|| EnterNum=="m")
+        else if (EnterNum == "M" || EnterNum == "m")
         {
             if (MemoryValue == 0 & ActionCount == 0)
             {
@@ -111,11 +111,25 @@ dynamic IntEnter(ref double MemoryValue,ref double ActionCount)
         else
         {
             Console.WriteLine("Try Again");
-            return IntEnter(ref MemoryValue,ref ActionCount);
+            return IntEnter(ref MemoryValue, ref ActionCount);
         }
 
     }
-    
+}   
 
+
+    class HardAction
+{
+    double Expo (double a, double b)
+    {
+        a = 1;
+        for (double i = 0; b > i; i++ )
+        {
+            a*=a;
+        }
+        return a;
+    }
 }
+
+
 
