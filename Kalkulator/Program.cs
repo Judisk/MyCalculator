@@ -36,7 +36,7 @@ dynamic CheckAction(double valueOne,double valueTwo ,int action)
     if (action == 1) return valueOne + valueTwo;
     else if (action == 2) return valueOne - valueTwo;
     else if (action == 3) return valueOne * valueTwo;
-    else
+    else if (action ==4 )
     {
         if (valueTwo == 0)
         {
@@ -45,6 +45,7 @@ dynamic CheckAction(double valueOne,double valueTwo ,int action)
         }
         else return valueOne / valueTwo; 
     }
+    else return Expo(valueOne,valueTwo);
 }
 
 dynamic CheckTryAction()
@@ -54,6 +55,7 @@ dynamic CheckTryAction()
     else if (action == "-") return 2;
     else if (action == "*") return 3;
     else if (action == "/") return 4;
+    else if (action == "**") return 5;
     else if (action == "Exit" || action == "Stop" || action == "exit" || action == "stop")
     {
         Console.WriteLine("Goodbye");
@@ -115,21 +117,23 @@ dynamic IntEnter(ref double MemoryValue,ref double ActionCount)
         }
 
     }
-}   
+}
 
 
-    class HardAction
+double Expo(double a, double b)
 {
-    double Expo (double a, double b)
+    double a0 = a;
+    if (b < 0)
     {
-        a = 1;
-        for (double i = 0; b > i; i++ )
-        {
-            a*=a;
-        }
+        for (double i = -1; i > b; i--) a *= a0;
+        return 1 / a;
+    }
+    else if (b == 0) return 1;
+    else
+    {
+        for (double i = 1; i < b; i++) a *= a0;
         return a;
     }
 }
-
 
 
